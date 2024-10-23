@@ -1,16 +1,28 @@
 {
-  "name": "server",
+  "name": "task_chat-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/main.js",
   "license": "MIT",
-  "private": true,
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "supervisor index.js"
+    "build": "yarn tsc",
+    "dev": "yarn nodemon"
   },
   "dependencies": {
+    "express": "^4.21.1",
+    "express-ws": "^5.0.2",
+    "js-guid": "^1.0.2",
     "lowdb": "^7.0.1",
-    "socket.io": "^4.8.0",
-    "supervisor": "^0.12.0"
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/express-ws": "^3.0.5",
+    "@types/lowdb": "^1.0.15",
+    "@types/node": "^22.7.8",
+    "@types/ws": "^8.5.12",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   }
 }
