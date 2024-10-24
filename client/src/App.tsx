@@ -1,22 +1,12 @@
-import { useEffect } from 'react'
-
-const ws = new WebSocket('ws://localhost:5000')
+import { BrowserRouter, RouterProvider } from 'react-router-dom'
+import AppRouter from './router/AppRouter'
 
 function App() {
-
-  useEffect(() => {
-    ws.onopen = (e) => {
-      console.log('подключился')
-    }
-
-    ws.onmessage = (e) => {
-      console.log('подключился')
-    }
-  })
-
   return (
     <div className="App">
-
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
     </div>
   )
 }

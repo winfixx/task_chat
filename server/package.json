@@ -9,6 +9,7 @@
     "dev": "yarn nodemon"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.1",
     "express-ws": "^5.0.2",
     "js-guid": "^1.0.2",
@@ -16,6 +17,7 @@
     "ws": "^8.18.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/express-ws": "^3.0.5",
     "@types/lowdb": "^1.0.15",
@@ -23,6 +25,7 @@
     "@types/ws": "^8.5.12",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
     "typescript": "^5.6.3"
   }
 }

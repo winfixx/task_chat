@@ -1,32 +1,47 @@
 import { JSONFilePreset } from 'lowdb/node'
 
 type Message = {
-  messageId: string
+  id: string
   userId: string
+  chatId: string
   senderName: string
   messageText: string
-  createdAt: string
+  createdAt: Date
+}
+
+type Chat = {
+  id: string
+  createdAt: Date
 }
 
 type Data = {
   messages: Message[]
+  chats: Chat[]
 }
 
 const defaultData: Data = {
+  chats: [
+    {
+      id: '1',
+      createdAt: new Date('2021-01-14')
+    }
+  ],
   messages: [
     {
-      messageId: '1',
+      id: '1',
       userId: '1',
+      chatId: '',
       senderName: 'Bob',
       messageText: 'What are you doing here?',
-      createdAt: '2021-01-14'
+      createdAt: new Date('2021-01-14')
     },
     {
-      messageId: '2',
+      id: '2',
       userId: '2',
+      chatId: '',
       senderName: 'Alice',
       messageText: 'Go back to work!',
-      createdAt: '2021-02-15'
+      createdAt: new Date('2021-02-15')
     }
   ]
 }
