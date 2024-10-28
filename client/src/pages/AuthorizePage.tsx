@@ -1,8 +1,8 @@
-import { Button, Form } from 'react-bootstrap'
-import { useAppDispatch } from '../hooks/redux'
 import { FormEventHandler, useState } from 'react'
-import { usersAction } from '../stores/reducers/userSlice'
+import { Button, Form } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import { useAppDispatch } from '../hooks/redux'
+import { usersAction } from '../stores/reducers/userSlice'
 
 type Props = {}
 
@@ -32,7 +32,12 @@ const AuthorizePage = (props: Props) => {
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Form.Group controlId="username">
             <Form.Label>Имя</Form.Label>
-            <Form.Control value={userName} onChange={e => setUserName(e.target.value)} type="text" placeholder="Введите имя" required />
+            <Form.Control
+              value={userName}
+              onChange={e => setUserName(e.target.value)}
+              type="text"
+              placeholder="Введите имя"
+              required />
             <Form.Control.Feedback type="invalid">
               Пожалуйста введите имя
             </Form.Control.Feedback>

@@ -1,3 +1,4 @@
+
 export class Chat {
   constructor(
     public id: string,

@@ -1,4 +1,5 @@
 import AuthorizePage from '../pages/AuthorizePage'
+import ChatPage from '../pages/ChatPage'
 import HomePage from '../pages/HomePage'
 
 export const authRoutes = [
@@ -8,7 +9,7 @@ export const authRoutes = [
   },
   {
     path: '/chats/:chatId',
-    Component: HomePage
+    Component: ChatPage
   },
 ]
 

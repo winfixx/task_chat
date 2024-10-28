@@ -1,20 +1,19 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { Guid } from 'js-guid'
+import { User } from '../../types/User'
 
 interface IInitialState {
-  id: Guid | string
-  name: string
   isAuth: boolean
 }
 
-const initialState: IInitialState = {
+const initialState: User & IInitialState = {
   id: Guid.EMPTY,
   name: '',
   isAuth: false
 }
 
 const usersSlice = createSlice({
-  name: 'modal',
+  name: 'users store',
   initialState,
   reducers: {
     setUser(s, {payload}: PayloadAction<{userName: string}>) {
